@@ -21,3 +21,16 @@ indent_size = 2  #Recommended as industry standard. Xml files have deep nesting,
 # C# files
 [*.cs]
 indent_size = 4  #Recommended as industry standard. Allowed to be replaced to 2. Not so important, as modern C# code-style recommends to break long lines.
+
+#### .NET Coding Conventions ####
+
+# Organize usings
+dotnet_separate_import_directive_groups = false
+dotnet_sort_system_directives_first = false
+file_header_template = unset
+
+# this. and Me. preferences
+dotnet_style_qualification_for_event = false:error
+dotnet_style_qualification_for_field = false:error
+dotnet_style_qualification_for_method = false:silent  #Sometimes, it's more readable when methods are called through this (e.g., this.GetType()).
+dotnet_style_qualification_for_property = false:error
