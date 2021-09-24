@@ -44,3 +44,24 @@ dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary:s
 dotnet_style_parentheses_in_other_binary_operators = never_if_unnecessary:silent       #Prefer var v = a || b && c; Over var v = a || (b && c);
 dotnet_style_parentheses_in_other_operators = never_if_unnecessary:error               #Prefer var v = a.b.Length; Over var v = (a.b).Length;
 dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:error     #Prefer var v = (a < b) == (c > d); Over var v = a < b == c > d;
+
+# Modifier preferences
+dotnet_style_require_accessibility_modifiers = omit_if_default:silent  #Prefer accessibility modifiers to be specified except if they are the default modifier.
+
+# Expression-level preferences
+dotnet_style_coalesce_expression = true:error                                    #Prefer var v = x ?? y; Over var v = x != null ? x : y;
+dotnet_style_collection_initializer = true:error                                 #Prefer var list = new List<int> { 1, 2, 3 }; Over var list = new List<int>(); list.Add(1);
+dotnet_style_explicit_tuple_names = true:error                                   #Prefer (string name, int age) customer = GetCustomer(); var name = customer.name; Over var name = customer.Item1;
+dotnet_style_namespace_match_folder = true:error
+dotnet_style_null_propagation = true:error                                       #Prefer string v = o?.ToString(); Over string v = o != null ? o.String() : null;
+dotnet_style_object_initializer = true:error                                     #Prefer var c = new Customer() { Age = 21 }; Over var c = new Customer(); c.Age = 21;
+dotnet_style_operator_placement_when_wrapping = beginning_of_line:error          #Prefer operators like && on new line
+dotnet_style_prefer_auto_properties = true:error                                 #Prefer int Age { get; }
+dotnet_style_prefer_compound_assignment = true:error                             #Prefer x += 1; Over x = x + 1;
+dotnet_style_prefer_conditional_expression_over_assignment = true:silent         #Prefer string s = expr ? "hello" : "world"; But sometimes if-else is more convinient for big portions of code 
+dotnet_style_prefer_conditional_expression_over_return = true:silent             #Prefer return expr ? "hello" : "world" But sometimes if-else is more convinient (e.g. arguments checking)
+dotnet_style_prefer_inferred_anonymous_type_member_names = true:silent           #Prefer var anon = new { age, name }; var anon = new { age = age, name = name };
+dotnet_style_prefer_inferred_tuple_names = true:error                            #Prefer var tuple = (age, name); Over var tuple = (age: age, name: name); But sometimes custom names are more clear
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:error    #Prefer if (value is null) Over if (object.ReferenceEquals(value, null))
+dotnet_style_prefer_simplified_boolean_expressions = true:error                  #Prefer bool result1 = M1() && M2(); Over bool result1 = M1() && M2() ? true : false;
+dotnet_style_prefer_simplified_interpolation = true:error                        #Prefer $"prefix {someValue} suffix"; Over $"prefix {someValue.ToString()} suffix";
