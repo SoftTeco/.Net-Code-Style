@@ -32,9 +32,15 @@ file_header_template = unset
 # this. and Me. preferences
 dotnet_style_qualification_for_event = false:error
 dotnet_style_qualification_for_field = false:error
-dotnet_style_qualification_for_method = false:silent  #Sometimes, it's more readable when methods are called through this (e.g., this.GetType()).
+dotnet_style_qualification_for_method = false:silent   #Sometimes, it's more readable when methods are called through this (e.g., this.GetType()).
 dotnet_style_qualification_for_property = false:error
 
 # Language keywords vs BCL types preferences
 dotnet_style_predefined_type_for_locals_parameters_members = true:error  #Prefer int local; It's more readable, though can add some inconvinience over refactoring.
 dotnet_style_predefined_type_for_member_access = false:error             #Prefer String.IsNullOrEmpty("s"); MSDN style. It displays that we work with class rather than primitive type.
+
+# Parentheses preferences
+dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary:silent  #Prefer var v = a + b * c; Over var v = a + (b * c);
+dotnet_style_parentheses_in_other_binary_operators = never_if_unnecessary:silent       #Prefer var v = a || b && c; Over var v = a || (b && c);
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary:error               #Prefer var v = a.b.Length; Over var v = (a.b).Length;
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:error     #Prefer var v = (a < b) == (c > d); Over var v = a < b == c > d;
