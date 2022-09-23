@@ -25,9 +25,9 @@ indent_size = 4  #Recommended as industry standard. Allowed to be replaced to 2.
 #### .NET Coding Conventions ####
 
 # Organize usings
-dotnet_separate_import_directive_groups = false
-dotnet_sort_system_directives_first = false
-file_header_template = unset
+dotnet_separate_import_directive_groups = false #Reasons to seaparate the directives not found. If someone finds it useful, then the arguments are welcome.
+dotnet_sort_system_directives_first = false     #It's easier for human brain to search in list sorted from A to Z instead of searching in two lists.
+file_header_template = unset                    #Blank.
 
 # this. and Me. preferences
 dotnet_style_qualification_for_event = false:error
@@ -38,3 +38,6 @@ dotnet_style_qualification_for_property = false:error
 # Language keywords vs BCL types preferences
 dotnet_style_predefined_type_for_locals_parameters_members = true:error  #Prefer int local; It's more readable, though can add some inconvinience over refactoring.
 dotnet_style_predefined_type_for_member_access = false:error             #Prefer String.IsNullOrEmpty("s"); MSDN style. It displays that we work with class rather than primitive type.
+
+# Expression-level preferences
+dotnet_style_namespace_match_folder = true:error  #Industry standard.
