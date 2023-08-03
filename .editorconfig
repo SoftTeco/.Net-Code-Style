@@ -118,3 +118,20 @@ dotnet_diagnostic.IDE0045.severity = silent
 #(11) Use conditional expression for return (IDE0046)
 dotnet_style_prefer_conditional_expression_over_return = true:error
 dotnet_diagnostic.IDE0046.severity = error
+
+#(12) Use compound assignment (IDE0054 and IDE0074)
+dotnet_style_prefer_compound_assignment = true:error
+dotnet_diagnostic.IDE0054.severity = error
+dotnet_diagnostic.IDE0074.severity = error
+
+#(12) Use index operator (IDE0056)
+csharp_style_prefer_index_operator = true:error
+dotnet_diagnostic.IDE0056.severity = error
+
+#(12) Use range operator (IDE0057)
+csharp_style_prefer_range_operator = true:error
+dotnet_diagnostic.IDE0057.severity = error
+
+#(12) Simplify interpolation (IDE0071)
+dotnet_style_prefer_simplified_interpolation = true:error
+dotnet_diagnostic.IDE0071.severity = error
