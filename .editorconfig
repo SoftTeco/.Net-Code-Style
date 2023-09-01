@@ -135,3 +135,21 @@ dotnet_diagnostic.IDE0057.severity = error
 #(12) Simplify interpolation (IDE0071)
 dotnet_style_prefer_simplified_interpolation = true:error
 dotnet_diagnostic.IDE0071.severity = error
+
+#(16) Use throw expression (IDE0016)
+csharp_style_throw_expression = false:error
+dotnet_diagnostic.IDE0016.severity = error
+
+#(16) Null check can be simplified (IDE0029, IDE0030, IDE0270)
+dotnet_style_coalesce_expression = false:silent
+dotnet_diagnostic.IDE0029.severity = silent
+dotnet_diagnostic.IDE0030.severity = silent
+dotnet_diagnostic.IDE0270.severity = silent
+
+#(16) Use null propagation (IDE0031)
+dotnet_style_null_propagation = true:error
+dotnet_diagnostic.IDE0031.severity = error
+
+#(16) Use 'is null' check (IDE0041)
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:error
+dotnet_diagnostic.IDE0041.severity = error
