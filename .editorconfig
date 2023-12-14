@@ -185,12 +185,27 @@ csharp_style_expression_bodied_properties = true:error
 dotnet_diagnostic.IDE0025.severity = error
 
 # Pattern matching preferences
-#csharp_style_pattern_matching_over_as_with_null_check = true:error
-#csharp_style_pattern_matching_over_is_with_cast_check = true:error
+
+#(19) Use pattern matching to avoid 'as' followed by a 'null' check (IDE0019); Use pattern matching (IDE0260)
+csharp_style_pattern_matching_over_as_with_null_check = true:error
+dotnet_diagnostic.IDE0019.severity = error
+dotnet_diagnostic.IDE0260.severity = error
+
+#(19) Use pattern matching to avoid 'is' check followed by a cast (IDE0020 and IDE0038)
+csharp_style_pattern_matching_over_is_with_cast_check = true:error
+dotnet_diagnostic.IDE0020.severity = error
+dotnet_diagnostic.IDE0038.severity = error
+
 #csharp_style_prefer_extended_property_pattern = true
 #csharp_style_prefer_not_pattern = true:error
-#csharp_style_prefer_pattern_matching = true
-#csharp_style_prefer_switch_expression = true:error
+
+#(19) Use pattern matching (IDE0078)
+csharp_style_prefer_pattern_matching = true:error
+dotnet_diagnostic.IDE0078.severity = error
+
+#(19) Use switch expression (IDE0066)
+csharp_style_prefer_switch_expression = true:error
+dotnet_diagnostic.IDE0066.severity = error
 
 # Null-checking preferences
 #(17) Use conditional delegate call (IDE1005)
