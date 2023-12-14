@@ -116,7 +116,9 @@ dotnet_diagnostic.IDE0037.severity = error
 dotnet_style_prefer_is_null_check_over_reference_equality_method = true:error
 dotnet_diagnostic.IDE0041.severity = error
 
-#dotnet_style_prefer_simplified_boolean_expressions = true:error
+#(14) Simplify conditional expression (IDE0075)
+dotnet_style_prefer_simplified_boolean_expressions = true:error
+dotnet_diagnostic.IDE0075.severity = error
 
 #(12) Simplify interpolation (IDE0071)
 dotnet_style_prefer_simplified_interpolation = true:error
@@ -211,7 +213,14 @@ dotnet_diagnostic.IDE0036.severity = error
 # Code-block preferences
 #csharp_prefer_braces = true
 #csharp_prefer_simple_using_statement = true:error
-#csharp_style_namespace_declarations = file_scoped:error
+
+#(14) Namespace declaration preferences (IDE0160 and IDE0161)
+csharp_style_namespace_declarations = file_scoped:error
+# Use block-scoped namespace
+dotnet_diagnostic.IDE0160.severity = error
+# Use file-scoped namespace
+dotnet_diagnostic.IDE0161.severity = error
+
 #csharp_style_prefer_method_group_conversion = true:error
 #csharp_style_prefer_top_level_statements = true:error
 
@@ -225,7 +234,9 @@ dotnet_diagnostic.IDE0034.severity = error
 csharp_style_deconstructed_variable_declaration = true:silent
 dotnet_diagnostic.IDE0042.severity = silent
 
-#csharp_style_implicit_object_creation_when_type_is_apparent = true:error
+#(14) Simplify new expression (IDE0090)
+csharp_style_implicit_object_creation_when_type_is_apparent = true:error
+dotnet_diagnostic.IDE0090.severity = error
 
 #(7) Inline variable declaration (IDE0018)
 csharp_style_inlined_variable_declaration = true:error
@@ -247,7 +258,10 @@ dotnet_diagnostic.IDE0150.severity = error
 csharp_style_prefer_range_operator = true:error
 dotnet_diagnostic.IDE0057.severity = error
 
-#csharp_style_prefer_tuple_swap = true:error
+#(14) Use tuple to swap values (IDE0180)
+csharp_style_prefer_tuple_swap = true:error
+dotnet_diagnostic.IDE0180.severity = error
+
 #csharp_style_prefer_utf8_string_literals = true
 
 #(16) Use throw expression (IDE0016)
