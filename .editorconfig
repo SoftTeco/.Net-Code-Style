@@ -27,7 +27,10 @@ indent_size = 4  #Recommended as industry standard. Allowed to be replaced to 2.
 # Organize usings
 dotnet_separate_import_directive_groups = false #Reasons to seaparate the directives not found. If someone finds it useful, then the arguments are welcome.
 dotnet_sort_system_directives_first = false     #It's easier for human brain to search in list sorted from A to Z instead of searching in two lists.
-file_header_template = unset                    #Blank.
+
+#(23) Require file header (IDE0073)
+file_header_template = unset
+dotnet_diagnostic.IDE0073.severity = error
 
 # this. and Me. preferences
 dotnet_style_qualification_for_event = false:error
@@ -76,7 +79,9 @@ dotnet_diagnostic.IDE0028.severity = silent
 dotnet_style_explicit_tuple_names = true:error
 dotnet_diagnostic.IDE0033.severity = error
 
-dotnet_style_namespace_match_folder = true:error  #Industry standard.
+#(23) Namespace does not match folder structure (IDE0130)
+dotnet_style_namespace_match_folder = true:error
+dotnet_diagnostic.IDE0130.severity = error
 
 #(16) Use null propagation (IDE0031)
 dotnet_style_null_propagation = true:error
@@ -294,11 +299,17 @@ dotnet_diagnostic.IDE0180.severity = error
 csharp_style_throw_expression = false:error
 dotnet_diagnostic.IDE0016.severity = error
 
-#csharp_style_unused_value_assignment_preference = discard_variable:silent
-#csharp_style_unused_value_expression_statement_preference = discard_variable
+#(23) Remove unnecessary value assignment (IDE0059)
+csharp_style_unused_value_assignment_preference = discard_variable:error
+dotnet_diagnostic.IDE0059.severity = error
 
-# 'using' directive preferences
-#csharp_using_directive_placement = outside_namespace:error
+#(23) Remove unnecessary expression value (IDE0058)
+csharp_style_unused_value_expression_statement_preference = discard_variable:error
+dotnet_diagnostic.IDE0058.severity = error
+
+#(23) 'using' directive placement (IDE0065)
+csharp_using_directive_placement = outside_namespace:error
+dotnet_diagnostic.IDE0065.severity = error
 
 # New line preferences
 #csharp_style_allow_blank_line_after_colon_in_constructor_initializer_experimental = false:error
