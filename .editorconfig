@@ -1,5 +1,9 @@
 # To learn more about .editorconfig see https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
 
+# If a comment begins with a number in parentheses, e.g. "#(23) Require file header (IDE0073)", then the number is an issue's ID
+# on GitHub where the option preceded by the comment was documented.
+# The link to the issue will be https://github.com/SoftTeco/.Net-Code-Style/issues/<number>.
+
 #Remove the line if you want to inherit .editorconfig settings from higher directories
 root = true
 
