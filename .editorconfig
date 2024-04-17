@@ -1,32 +1,47 @@
 # To learn more about .editorconfig see https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
 
-root = true  #Remove the line if you want to inherit .editorconfig settings from higher directories
+#Remove the line if you want to inherit .editorconfig settings from higher directories
+root = true
 
 # All files
 [*]
 #### Core EditorConfig Options ####
 # Indentation and spacing
-indent_size = 2  #Recommended by default, but it can be overwritten by rules below (depending on file extension).
-indent_style = space  #Spaces instead of tabs, as different code readors (e.g., online git code comparers) interprent tabs with different indent.
+
+#Recommended by default, but it can be overwritten by rules below (depending on file extension).
+indent_size = 2
+
+#Spaces instead of tabs, as different code readors (e.g., online git code comparers) interprent tabs with different indent.
+indent_style = space
 
 # New line preferences
 end_of_line = crlf
-insert_final_newline = true:error  #Git doesn't like, when file is not ended with space.
-trim_trailing_whitespace = true:error  #Trailing whitespaces complicate work with code in text editor and git.
+
+#Git doesn't like, when file is not ended with space.
+insert_final_newline = true:error
+
+#Trailing whitespaces complicate work with code in text editor and git.
+trim_trailing_whitespace = true:error
 
 # Xml files
+#Recommended as industry standard. Xml files have deep nesting, so small indent is important.
 [*.{xml,xaml,config,aspx,cshtml,html}]
-indent_size = 2  #Recommended as industry standard. Xml files have deep nesting, so small indent is important.
+indent_size = 2
 
 # C# files
+#Recommended as industry standard. Allowed to be replaced to 2. Not so important, as modern C# code-style recommends to break long lines.
 [*.cs]
-indent_size = 4  #Recommended as industry standard. Allowed to be replaced to 2. Not so important, as modern C# code-style recommends to break long lines.
+indent_size = 4
 
 #### .NET Coding Conventions ####
 
 # Organize usings
-dotnet_separate_import_directive_groups = false #Reasons to seaparate the directives not found. If someone finds it useful, then the arguments are welcome.
-dotnet_sort_system_directives_first = false     #It's easier for human brain to search in list sorted from A to Z instead of searching in two lists.
+
+#Reasons to seaparate the directives not found. If someone finds it useful, then the arguments are welcome.
+dotnet_separate_import_directive_groups = false
+
+#It's easier for human brain to search in list sorted from A to Z instead of searching in two lists.
+dotnet_sort_system_directives_first = false
 
 #(23) Require file header (IDE0073)
 file_header_template = unset
