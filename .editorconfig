@@ -113,7 +113,9 @@ dotnet_diagnostic.IDE0045.severity = silent
 dotnet_style_prefer_conditional_expression_over_return = true:error
 dotnet_diagnostic.IDE0046.severity = error
 
-#dotnet_style_prefer_foreach_explicit_cast_in_source = when_strongly_typed
+#(26) Add explicit cast in foreach loop (IDE0220)
+dotnet_style_prefer_foreach_explicit_cast_in_source = always:error
+dotnet_diagnostic.IDE0220.severity = error
 
 #(8) Use inferred member names (IDE0037)
 dotnet_style_prefer_inferred_anonymous_type_member_names = true:error
@@ -237,8 +239,13 @@ dotnet_diagnostic.IDE0062.severity = error
 #csharp_preferred_modifier_order = public,private,protected,internal,file,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,required,volatile,async
 dotnet_diagnostic.IDE0036.severity = error
 
-#csharp_style_prefer_readonly_struct = true:error
-#csharp_style_prefer_readonly_struct_member = true
+#(26) Struct can be made 'readonly' (IDE0250)
+csharp_style_prefer_readonly_struct = true:error
+dotnet_diagnostic.IDE0250.severity = error
+
+#(26) Member can be made 'readonly' (IDE0251)
+csharp_style_prefer_readonly_struct_member = true:error
+dotnet_diagnostic.IDE0251.severity = error
 
 # Code-block preferences
 
@@ -257,8 +264,13 @@ dotnet_diagnostic.IDE0160.severity = error
 # Use file-scoped namespace
 dotnet_diagnostic.IDE0161.severity = error
 
-#csharp_style_prefer_method_group_conversion = true:error
-#csharp_style_prefer_top_level_statements = true:error
+#(26) Remove unnecessary lambda expression (IDE0200)
+csharp_style_prefer_method_group_conversion = false:silent
+dotnet_diagnostic.IDE0200.severity = silent
+
+#(26) Convert to top-level statements (IDE0210)
+csharp_style_prefer_top_level_statements = true:error
+dotnet_diagnostic.IDE0210.severity = error
 
 # Expression-level preferences
 
@@ -298,7 +310,9 @@ dotnet_diagnostic.IDE0057.severity = error
 csharp_style_prefer_tuple_swap = true:error
 dotnet_diagnostic.IDE0180.severity = error
 
-#csharp_style_prefer_utf8_string_literals = true
+#(26) Use UTF-8 string literal (IDE0230)
+csharp_style_prefer_utf8_string_literals = false:silent
+dotnet_diagnostic.IDE0230.severity = silent
 
 #(16) Use throw expression (IDE0016)
 csharp_style_throw_expression = false:error
