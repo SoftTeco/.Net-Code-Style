@@ -62,7 +62,7 @@ dotnet_diagnostic.IDE0009.severity = error
 #(24) Use language keywords instead of framework type names for type references (IDE0049)
 dotnet_style_predefined_type_for_locals_parameters_members = true:error
 dotnet_style_predefined_type_for_member_access = true:error
-dotnet_diagnostic.IDE0049.severity = true
+dotnet_diagnostic.IDE0049.severity = error
 
 # Parentheses preferences (IDE0047 and IDE0048)
 
